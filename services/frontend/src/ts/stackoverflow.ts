@@ -19,7 +19,7 @@ export function loadCodeFromQuestion (questionId: string): Observable<string> {
         while ((result = codeRegex.exec(body))) {
           const match = result[1]
             .replace(/&quot;/g, '"')
-            .replace(/&qt;/g, '>')
+            .replace(/&gt;/g, '>')
             .replace(/&lt;/g, '<')
           results.push(match)
         }
