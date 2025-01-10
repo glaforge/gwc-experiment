@@ -290,7 +290,7 @@ export function initView () {
       console.log('Could not load script', err)
       executionResult = {
         out: '',
-        err: 'An error occurred while loading the remote script.\nThis can be caused by the NoScript browser extension.',
+        err: 'An error occurred while loading the remote script.\nThis can be caused by the NoScript browser extension.\n\n' + err,
         result: null,
         info: null
       }
