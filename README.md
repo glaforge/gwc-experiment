@@ -4,8 +4,8 @@
 
 ### Building the backend
 
-Go to `functions/function-executor` and type `mvnw package`.
-The output will be in `functions/function-executor/target/deployment`.
+Go to `functions/groovy-executor` and type `../../mvnw package`.
+The output will be in `functions/groovy-executor/target/deployment`.
 
 There are different profiles, one for each groovy version:
 
@@ -13,7 +13,7 @@ There are different profiles, one for each groovy version:
 * `groovy_3_0` (default)
 * `groovy_2_5`
 
-Use `mvn package -P groovy_2_5`
+Use `../../mvnw package -P groovy_2_5`
 
 ### Deploying the backend
 
@@ -36,7 +36,7 @@ The output will be in `services/frontend/dist`.
 Do the same steps as building the frontend but substitute the last command for:
 
  * `npm run serve-remote` to run the frontend with the remote backend
- * `npm run serve-local` to run the frontend with the local backend (start it with `mvnw function:run`)
+ * `npm run serve-local` to run the frontend with the local backend (start it with `../../mvnw function:run` from inside `functions/groovy-executor`)
 
 ### Checking code style
 
@@ -48,6 +48,3 @@ The web frontend consists only of static assets (HTML, JavaScript, and CSS).
 Go to https://github.com/groovy-console/groovy-web-console/actions/workflows/deploy-frontend.yml and click on `Run Workflow`.
 
 Alternatively, to deploy it manually after building it, go to the `services/frontend` directory, and type: `./deploy.sh`
-
-
-
